@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+
+<VBox id="VBox"
+      xmlns:fx="http://javafx.com/fxml/1" 
+      fx:controller="course.CourseListController">
+    <padding>
+        <Insets top="10.0" right = "10.0" bottom = "10.0" left = "10.0" />
+    </padding>
+    <GridPane hgap="20">
+        <VBox GridPane.columnIndex = "0" GridPane.columnSpan="2">
+            <Label text="Select a course from the list:" />
+            <ComboBox fx:id="ddlCourses" prefWidth="150"/>
+        </VBox>
+
+        <VBox GridPane.columnIndex = "2" GridPane.columnSpan="4">
+            <Label text="Course Code:" />
+            <TextField fx:id="txtCode" />
+            <Label text="Course Grade:"/>
+            <TextField fx:id="txtGrade"/>
+            <Label text="Max Grade:"/>
+            <TextField fx:id="txtMaxGrade"/>
+            <Label fx:id="lblStatus" />
+        </VBox> 
+    </GridPane>
+    
+    <HBox spacing="25">
+        <Button text="Edit" onAction="#edit"/>
+        <Button text="Exit" onAction="#exit"/>
+    </HBox>
+</VBox>
